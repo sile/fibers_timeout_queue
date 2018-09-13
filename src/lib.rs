@@ -220,16 +220,16 @@ mod tests {
         let mut queue = TimeoutQueue::new();
         assert!(queue.is_empty());
 
-        queue.push(1, Duration::from_millis(8));
-        queue.push(2, Duration::from_millis(1));
+        queue.push(1, Duration::from_millis(20));
+        queue.push(2, Duration::from_millis(10));
         assert_eq!(queue.pop(), None);
         assert_eq!(queue.len(), 2);
 
-        thread::sleep(Duration::from_millis(5));
+        thread::sleep(Duration::from_millis(12));
         assert_eq!(queue.pop(), Some(2));
         assert_eq!(queue.len(), 1);
 
-        thread::sleep(Duration::from_millis(5));
+        thread::sleep(Duration::from_millis(10));
         assert_eq!(queue.pop(), Some(1));
         assert_eq!(queue.len(), 0);
     }
