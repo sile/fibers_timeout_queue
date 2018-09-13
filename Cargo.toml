@@ -1,0 +1,18 @@
+[package]
+name = "fibers_timeout_queue"
+version = "0.1.0"
+authors = ["Takeru Ohta <phjgt308@gmail.com>"]
+description = "Timeout queue based on `fibers` crate"
+homepage = "https://github.com/sile/fibers_timeout_queue"
+repository = "https://github.com/sile/fibers_timeout_queue"
+readme = "README.md"
+keywords = ["fibers"]
+license = "MIT"
+
+[badges]
+travis-ci = {repository = "sile/fibers_timeout_queue"}
+codecov = {repository = "sile/fibers_timeout_queue"}
+
+[dependencies]
+fibers = "0.1"
+futures = "0.1"
